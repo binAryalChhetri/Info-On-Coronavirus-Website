@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: raleway, sans-serif;
+  background-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-to-top {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: white;
+  bottom: 0px;
+  right: 30px;
+  background-color: #4990f3b7;
+  font-size: 1.5rem;
+  padding: 0.4em;
+  border-radius: 50%;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.active {
+  bottom: 30px;
+  opacity: 1;
+}
+
+/* styling anchors tags, hovers, transitions and other effects */
+
+a {
+  text-decoration: none;
+  transition: scale 300ms;
+}
+
+.nav-bar li {
+  transition: border-bottom 300ms linear;
+}
+.nav-bar li:hover {
+  border-bottom: solid 2px #102039;
+}
+
+.contents-on-doctor button {
+  transition: scale 200ms, box-shadow 300ms;
+}
+.contents-on-doctor button:hover {
+  scale: 1.1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.671);
+}
+
+.footerr a:hover {
+  scale: 1.1;
+}
+
+#menu,
+#cross {
+  transition: scale 200ms ease-in;
+}
+
+#menu:active,
+#menu:hover,
+#cross:active,
+#cross:hover {
+  scale: 1.1;
+}
+
+/* setting the widths of the nav Container,sections and footer. Also gathering common styles of different elements */
+
+.nav-container,
+.contents-on-doctor,
+.content-container,
+.copyright {
+  width: 90%;
+  margin: 0em auto;
+}
+
+#contact-number,
+.contents-on-doctor button {
+  background-color: #498ff3;
+  color: white;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+#cross,
+#menu,
+section h1,
+.contents-on-doctor h1,
+.logo-and-name h1 {
+  color: #102039;
+}
+
+/* styling the heading */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  background-color: white;
+  padding: 0.5em 0em 1em;
+  position: sticky;
+  top: 0px;
+}
+.logo-and-name {
+  display: flex;
+  align-items: center;
+
+  width: 25%;
+}
+
+.logo-and-name img {
+  cursor: pointer;
+  width: 80px;
+  min-width: 50px;
+  margin-right: 1em;
+}
+
+.logo-and-name h1 {
+  cursor: pointer;
+  font-family: lora;
+  font-size: 2.1rem;
+}
+
+.nav-bar {
+  width: 70%;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-bar li {
+  list-style: none;
+  margin-left: 1em;
+  border-bottom: solid 2px transparent;
+}
+
+.nav-bar a {
+  color: rgb(54, 54, 54);
+  font-weight: 500;
+}
+
+.nav-bar i {
+  font-size: 0.8rem;
+}
+
+#contact-number {
+  padding: 0.9em 0.8em;
+  font-family: lato;
+}
+
+/* mobile nav bar with ham burger menu */
+.mobile-nav {
+  text-align: center;
+}
+
+#menu {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.mobile-nav span {
+  margin-left: 0.3em;
+
+  font-family: raleway;
+}
+
+.mob-nav-bar {
+  padding: 0em 1em;
+
+  transition: height 500ms linear;
+  height: 0px;
+  overflow: hidden;
+}
+.mobile-nav li {
+  font-weight: 900;
+  list-style: none;
+
+  margin-top: 0.6em;
+}
+
+.mobile-nav li:first-child {
+  margin-top: 1.3em;
+}
+
+.mobile-nav a {
+  color: #498ff3;
+  font-size: 1.1rem;
+}
+
+#cross {
+  cursor: pointer;
+  margin-top: 0.5em;
+  font-size: 1.7rem;
+}
+
+/* styling the intro */
+
+.intro {
+  height: 620px;
+  background-image: url("../Images/Used in the content/doctor.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+.contents-on-doctor span {
+  color: #498ff3;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.contents-on-doctor h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+
+  margin: 0.1em 0em 0.3em;
+}
+
+.contents-on-doctor p {
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+}
+
+.contents-on-doctor button {
+  margin-top: 2em;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.8em 1em;
+  font-family: Arial, Helvetica, sans-serif;
+
+  letter-spacing: 1px;
+}
+
+.contents-on-doctor button i {
+  margin-left: 2em;
+}
+
+/* styling the sections and its contents */
+
+.about img {
+  border-radius: 20px;
+}
+
+section img {
+  width: 100%;
+}
+
+.intro + .content-container {
+  margin-top: 3.5em;
+}
+
+.content-container h1 {
+  font-size: 2rem;
+  font-family: lora;
+  text-align: center;
+  margin: 1.3em 0em 1em;
+}
+
+.content-container h2 {
+  padding-bottom: 0.1em;
+  display: inline-block;
+  margin-bottom: 1.3em;
+  border-bottom: solid 2px;
+}
+.content-container h3 {
+  font-size: 1.3rem;
+  color: #498ff3;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.content-container p {
+  max-width: 600px;
+  margin-top: 1em;
+}
+
+.common-symptoms,
+.serious-symptoms {
+  margin-top: 3em;
+}
+
+/* styling the footer */
+
+footer {
+  background-color: #102039;
+  padding: 2em 0em 1em;
+}
+
+.footerr h4 {
+  color: #498ff3;
+  margin-bottom: 1em;
+}
+
+.footerr a,
+.copyright {
+  color: white;
+}
+
+.footerr a {
+  margin-bottom: 0.5em;
+}
+
+.footerr img {
+  width: 30px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin-bottom: 1em;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* media queries for responsive layouts */
+
+@media (max-width: 1280px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .logo-and-name {
+    width: 80%;
+    justify-content: center;
+
+    margin-bottom: 1em;
+  }
+
+  .nav-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 870px) {
+  .nav-bar {
+    display: none;
+  }
+
+  .logo-and-name {
+    margin-bottom: 0em;
+  }
+
+  .content-container h3 {
+    margin-bottom: 2.4em;
+  }
+}
+
+@media (min-width: 870px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .about-contents {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .about-contents img {
+    width: 50%;
+    margin-right: 4em;
+  }
+
+  .about-contents p {
+    width: 50%;
+    max-width: auto;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin-top: 0em;
+  }
+
+  .content-container h1 {
+    margin-top: 2.5em;
+  }
+
+  .modes-of-transmission,
+  .list-of-preventions,
+  .list-of-common-symptoms,
+  .list-of-serious-symptoms {
+    display: grid;
+    margin: 0em auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .modes-of-transmission img,
+  .list-of-preventions img,
+  .list-of-common-symptoms img,
+  .list-of-serious-symptoms img,
+  .list-of-preventions img {
+    padding-bottom: 1em;
+    height: 270px;
+    width: 90%;
+    object-fit: cover;
+  }
+
+  .footerr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .intro h1 {
+    color: #f8f8f8;
+    text-shadow: 0px 0px 20px black;
+  }
+}
